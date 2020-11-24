@@ -1,5 +1,6 @@
 body {
 	background: url("WhiteHouse.png");
 	background-repeat: no-repeat;
-	background-size: 50%;
+	background-size: 100%;
+	overflow:auto;
 }

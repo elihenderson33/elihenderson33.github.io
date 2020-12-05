@@ -1,24 +1,22 @@
 body, html {
     height: 100%;
-    /* The image used */
-    background-image: url("whitehouses.png");
 
-    /* Center and scale the image nicely */
+    background-image: url("whitehouses.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.DkS1 {
+.JoeBiden {
     position: absolute;
     bottom: 35vh;
     left: 0;
 }
-.DkS2 {
+.DonaldTrump {
     position: absolute;
     bottom: 10vh;
     left: 0;
 }
-.PkS1 {
+.WinnerWinner {
     position: absolute;
     width: 400px;
     height: 200px;
@@ -27,9 +25,9 @@ body, html {
     margin-left: -200px;
     margin-top: -100px;
 }
-.EFlask {
+.RFlag {
     position: absolute;
 }
-.MFlask {
+.GFlag {
     position: absolute;
 }

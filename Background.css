@@ -1,6 +1,30 @@
 body {
-	background: url("whitehouses.png");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	overflow:auto;
+    background-image: url("whitehouses.png");
+    background-position: center top;
+}
+
+img {
+    height: 140px;
+    width: 100px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+#bDiv {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+}
+
+#tDiv {
+    position: absolute;
+    top: 270px;
+    left: 0px;
+}
+
+
+#start {
+    right: 50%;
 }

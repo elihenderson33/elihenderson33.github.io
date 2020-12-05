@@ -14,10 +14,10 @@
   <body>
 
     <div id="app">
-        <img src="JoeBiden.png" alt="Player 1" class="DkS1" id="p1" :style="player1Position">
-        <img src="DonaldTrump.png" alt="Player 2" class="DkS2" id="p2" :style="player2Position">
-        <img v-bind:src="buttonImage" id="start" alt="Flask" width="150px" height="150px" class="EFlask MFlask img-rounded" v-on:click="startRace">
-        <img v-bind:src="playerImage" alt="" class="PkS1">
+        <img src="JoeBiden.png" alt="Joe Biden" class="JoeBiden" id="JB" :style="JoeBidenPosition">
+        <img src="DonaldTrump.png" alt="Donald Trump" class="DonaldTrump" id="DT" :style="DonaldTrumpPosition">
+        <img v-bind:src="buttonImage" id="start" alt="Flag" width="150px" height="150px" class="RFlag GFlag img-rounded" v-on:click="startRace">
+        <img v-bind:src="winnerImage" alt="" class="WinnerWinner">
     </div>
 
     <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>

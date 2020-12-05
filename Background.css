@@ -1,37 +1,33 @@
 body {
-    margin: 0px;
-    padding: 0px;
     background-image: url("whitehouses.png");
-    background-repeat: repeat-x;
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
-}
-.raceArea {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
+img {
+    height: 140px;
+    width: 100px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: blanchedalmond;
 }
 
-#racer1 {
-    padding-left: 80px;
+
+#pig {
     position: absolute;
-    bottom: 800px;
+    top: 650px;
+    left: 0px;
 }
 
-#racer2 {
-    padding-left: 80px;
+#cow {
     position: absolute;
-    bottom: 725px;
+    top: 350px;
+    left: 0px;
 }
 
-#stoplight {
-    position: absolute;
-    top: 5px;
-    padding-left: 80px;
-}
-
-#stoplight2 {
-    position: absolute;
-    top: 5px;
-    right: 80px;
+#start {
+    right: 50%;
 }

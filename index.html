@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>The Presidential Race</title>
-			
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="Background.css">
-	</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>The Presidential Race</title>
+        <link href="Background.css" rel="stylesheet" />
+    </head>
 
-	<body>
- 	
-	<div class = 'raceTrack'>
+    <body onload="getReady()">
+        <input type="image" src="redFlag.png" id="start" onclick="startRace()">
 
-        	<img src="JoeBiden.png" id ="JoeBiden" width="150" alt="SleepyJoe"><br/>
+        <input type="image" src="greenFlag.png" id="start2"
 
-        	<img src="DonaldTrump.png" id="DonaldTrump" width="150" alt="TheOrangeMan">
+        <div id="bDiv">
+            <img src="JoeBiden.png" alt="Biden" id="Biden" class="racers" />
+            <img src="BidenWins.png" alt="Cullen Wins" id="BidenWins" class="racers" 
+		 onclick="getReady()" />
+        </div>
 
-      	</div><br/>
+        <div id="tDiv">
+            <img src="DonaldTrump.png" alt="Trump" id="Trump" class="racers" />
+            <img src="TrumpWins.png" alt="Greg Wins" id="TrumpWins" class="racers"
+                onclick="getReady()" />
+        </div>
+        <script src="main.js"></script>
+    </body>
 
-		<div style="float: left;">
-				
-			<img src ="RedFlag.png" width="300" alt="StartFlag" id="startButton" />
-			
-		</div>
-		<script src="JavaCode.js"></script>
-	</body>
+</html>

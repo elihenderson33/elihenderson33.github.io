@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>The Presidential Race</title>
-        <link href="Background.css" rel="stylesheet" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="Background.css">
+    <script src="scripts.js"></script>
+    <title>The Presidential Race</title>
+</head>
+<body onload="displayRacers()">
 
-    <body onload="getReady()">
-        <input type="image" src="redFlag.png" id="start" onclick="startRace()">
-
-        <input type="image" src="greenFlag.png" id="start2"
-
-        <div id="bDiv">
-            <img src="JoeBiden.png" alt="Biden" id="Biden" class="racers" />
-            <img src="BidenWins.png" alt="Cullen Wins" id="BidenWins" class="racers" 
-		 onclick="getReady()" />
+        <img src="Images/red.png" id="stoplight" width="100" onclick="startRace()">
+        <img src="" id="stoplight2">
+        <div class="raceArea">
+            
+            <div id="racer1">
+                <img id="racer1pic" width="300">
+            </div>
+            <div id="racer2">
+                <img id="racer2pic" width="300">
+            </div>
+            <div id="racer3">
+                <img id="racer3pic" width="300">
+            </div>
         </div>
-
-        <div id="tDiv">
-            <img src="DonaldTrump.png" alt="Trump" id="Trump" class="racers" />
-            <img src="TrumpWins.png" alt="Greg Wins" id="TrumpWins" class="racers"
-                onclick="getReady()" />
-        </div>
-        <script src="main.js"></script>
-    </body>
-
+</body>
 </html>

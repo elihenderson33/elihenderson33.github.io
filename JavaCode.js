@@ -56,7 +56,7 @@ var vue = new Vue({
     },
     computed: {
         buttonImage() {
-            return this.racing ? "RedFlag.png" : "GreenFlag.png";
+            return this.racing ? "GreenFlag.png" : "RedFlag.png";
         },
         playerImage() {
             if (this.awesomeDude == 1)

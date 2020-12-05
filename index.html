@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Presidential Race!</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="Background.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="Background.css">
+  </head>
+  <body>
 
+    <div id="app">
+        <img src="JoeBiden.png" alt="Player 1" class="DkS1" id="p1" :style="player1Position">
+        <img src="DonaldTrump.png" alt="Player 2" class="DkS2" id="p2" :style="player2Position">
+        <img v-bind:src="buttonImage" id="start" alt="Flask" width="250px" height="250px" class="EFlask MFlask img-rounded" v-on:click="startRace">
+        <img v-bind:src="winnerImage" alt="" class="WkS1">
+        <img v-bind:src="playerImage" alt="" class="PkS1">
+    </div>
 
-    </head>
-    <body>
-        <div class="container-fluid" id="race">
-        <img src="RedFlag.png" @click="startRace" id="hotline" alt="start button">
-
-        <img src="JoeBiden.png" id="blossom" class="racer" :style="blossomStyle" alt="blossom">
-        <img src="DonaldTrump.png" id="buttercup" class="racer" :style="buttercupStyle" alt="buttercup">
-        </div>
-
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
-        <script src="JavaCode.js"></script>
-    </body>
+    <script src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+     <script src="JavaCode.js"></script> 
+  </body>
 </html>

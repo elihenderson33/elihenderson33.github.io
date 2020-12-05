@@ -1,37 +1,29 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("whitehouses.png");
-    background-repeat: repeat-x;
+body{
+    background-image: url("whitehouses.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
-
-}
-.raceArea {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-}
-
-#racer1 {
-    padding-left: 80px;
+#start {
     position: absolute;
-    bottom: 800px;
+    left: 60%;
+    top: 30vh;
+    width: 15vh;
 }
-
-#racer2 {
-    padding-left: 80px;
+#redBike {
     position: absolute;
-    bottom: 725px;
+    left: 0;
+    bottom: 25%;
 }
-
-#stoplight {
+#blueBike {
     position: absolute;
-    top: 5px;
-    padding-left: 80px;
+    left: 0;
+    bottom: 23%;
 }
-
-#stoplight2 {
+.racer {
     position: absolute;
-    top: 5px;
-    right: 80px;
+    left: 0;
+    bottom: 11vh;  
 }

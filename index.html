@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TheGreatRace</title>
-    <link href="Background.css" rel="stylesheet"/>
-</head>
-<body onload="boogityBoogity()">
-    <input type="image" src="RedFlag.png" id="start" onclick="start()">
-
-    <input type ="image" src="GreenFlag.png" id="start2" onclick="start()">
-
-       <div id="pig">
-        <img src="JoeBiden.png" alt="pig" id="bacon" class="racer" />
-        <img src="BidenWins.png" alt="pigwins" id="pigwins" class="racer" onclick="boogityBoogity()" />
-    </div>
-
-    <div id="cow">
-        <img src="DonaldTrump.png" alt="cow" id="burger" class="racer" />
-        <img src="TrumpWins.png" alt="cowwins" id="cowwins" class="racer" onclick="boogityBoogity()" />
-    </div>
-    
+    <link rel="stylesheet" type="text/css" href="Background.css">
     <script src="JavaCode.js"></script>
+    <title>The Presidential Race</title>
+</head>
+<body onload="displayRacers()">
+
+        <img src="RedFlag.png" id="stoplight" width="100" onclick="startRace()">
+        <img src="" id="stoplight2">
+        <div class="raceArea">
+            
+            <div id="racer1">
+                <img id="racer1pic" width="300">
+            </div>
+            <div id="racer2">
+                <img id="racer2pic" width="300">
+        </div>
 </body>
 </html>

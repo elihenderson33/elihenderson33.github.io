@@ -4,21 +4,21 @@ var vue = new Vue({
         race: true,
         racing: false,
         winner: 0,
-        p1Move : 0,
-        p2Move : 0,
+        JoeBiden : 0,
+        DonaldTrump : 0,
         interval: null,
         moving: true,
-        awesomeDude: 0
+        President: 0
     },
     methods: {
         startRace() {
             if (this.race) {
                 this.race = false;
-                this.awesomeDude = 0;
+                this.President = 0;
                 this.racing = true;
                 this.moving = true;
-                this.p1Move = 0;
-                this.p2Move = 0;
+                this.JoeBiden = 0;
+                this.DonaldTrump = 0;
                 this.interval = setInterval(this.move, 200);
             }
             else return;
@@ -26,31 +26,31 @@ var vue = new Vue({
         move() {
             this.checkWinner();
             if (this.moving) {
-                this.p1Move += Math.floor(Math.random() * 10);
-                this.p2Move += Math.floor(Math.random() * 10);
+                this.JoeBiden += Math.floor(Math.random() * 10);
+                this.DonaldTrump += Math.floor(Math.random() * 10);
             }
         } ,
         checkWinner() {
-            if (this.p1Move == this.p2Move) return;
-            else if (this.p1Move >= 85 && this.p1Move > this.p2Move) {
+            if (this.JoeBiden == this.DonaldTrump) return;
+            else if (this.JoeBiden >= 85 && this.JoeBiden > this.DonaldTrump) {
                 clearInterval(this.interval);
-                this.player1Win();
+                this.JoeBidenWin();
                 this.moving = false;
                 this.race = true;
             }
-            else if (this.p2Move >= 85 && this.p2Move > this.p1Move) {
+            else if (this.DonaldTrump >= 85 && this.DonaldTrump > this.JoeBiden) {
                 clearInterval(this.interval);
-                this.player2Win();
+                this.DonaldTrumpWin();
                 this.moving = false;
                 this.race = true;
             }
         } ,
-        player1Win() {
-            this.awesomeDude = 1;
+        JoeBidenWin() {
+            this.President = 1;
             this.racing = false;
         } ,
-        player2Win() {
-            this.awesomeDude = 2;
+        DonaldTrumpWin() {
+            this.President = 2;
             this.racing = false;
         }
     },
@@ -58,25 +58,25 @@ var vue = new Vue({
         buttonImage() {
             return this.racing ? "GreenFlag.png" : "RedFlag.png";
         },
-        playerImage() {
-            if (this.awesomeDude == 1)
+        winnerImage() {
+            if (this.President == 1)
                 return "BidenWins.png";
-            else if (this.awesomeDude == 2)
+            else if (this.President == 2)
                 return "TrumpWins.png";
             else {
                 return "placeholder.png";
             }
         },
-        player1Position() {
+        JoeBidenPosition() {
             return {
-                left: this.p1Move + "vw",
+                left: this.JoeBiden + "vw",
                 height: "150px",
                 width: "150px"
             }
         } ,
-        player2Position() {
+        DonaldTrumpPosition() {
             return {
-                left: this.p2Move + "vw",
+                left: this.DonaldTrump + "vw",
                 height: "150px",
                 width: "150px"
             }

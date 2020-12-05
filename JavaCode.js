@@ -64,7 +64,7 @@ var vue = new Vue({
             else if (this.awesomeDude == 2)
                 return "TrumpWins.png";
             else {
-                return;
+                return "placeholder.png";
             }
         },
         player1Position() {

@@ -70,8 +70,8 @@ var vue = new Vue({
         player1Position() {
             return {
                 left: this.p1Move + "vw",
-                height: "175px",
-                width: "175px"
+                height: "150px",
+                width: "150px"
             }
         } ,
         player2Position() {

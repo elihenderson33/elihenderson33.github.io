@@ -1,48 +1,93 @@
-var pixels2 = 0;
-var pixels = 0;
+var raceSpeed;
 
-var BidenMove=document.getElementById('SleepyJoe');
-var TrumpMove = document.getElementById('TheOrangeMan');
-var start = document.getElementById("startButton");
-start.addEventListener("click", startGame, false);
+var bidenDiv = document.getElementById("bDiv");
+var trumpDiv = document.getElementById("tDiv");
 
-function startGame() {
-  start.src = "img/startLogo.gif";
-  start.height = "150";
+var bPos;
+var tPos;
 
-  function Biden(){
-    
-    BidenMove.setAttribute ("style", "margin-left:" + pixels + "px;");
-    
+var bImage = document.getElementById("Biden");
+var tImage = document.getElementById("Trump");
+
+function getReady() {
   
-    pixels2 = (pixels2 + randomPixels2);
-   
-    if (pixels2 > 850) {
-      stoptimer();
-      BidenMove.src = "img/angelWinner.gif";
-      BidenMove.width ="300";
-    }
-  }
+  bPos = 0;
+  tPos = 0;
 
+  bidenDiv.style.left = bPos + "px";
+  trumpDiv.style.left = tPos + "px";
 
-  function Trump(){
-    TrumpMove.setAttribute ("style", "margin-left:" + pixels + "px;");
-    randomPixels = Math.ceil(Math.random()*75)
-    pixels = (pixels + randomPixels);
-    if (pixels > 850) {
-      stoptimer();
-      TrumpMove.src = "img/davidWinner.gif";
-      TrumpMove.width = "300";
-    }
-  }
+  bImage.src = "JoeBiden.png";
+  tImage.src = "DonaldTrump.png";
 
-    myTimer2 = setInterval(Biden, 1000)
-    myTimer = setInterval(Trump, 1000)
+  bImage.style.display = "block";
+  tImage.style.display = "block";
 
+  document.getElementById("BidenWins").style.display = "none";
+  document.getElementById("TrumpWins").style.display = "none";
 
+  document.getElementById("start").style.display = "inline-block";
+  document.getElementById("start").style.width = "95px";
+  document.getElementById("start").style.height = "110px";
 
-  function stoptimer(){
-    clearInterval(myTimer);
-    clearInterval(myTimer2);
+  document.getElementById("start2").style.display = "none";
+}
+
+function startRace() {
+  getReady();
+  document.getElementById("start").style.display = "none";
+  document.getElementById("start2").style.width = "95px"; 
+  document.getElementById("start2").style.display = "block"; 
+  document.getElementById("start2").style.height = "110px";
+
+  raceSpeed = setInterval(movement); 
+}
+
+function movement() {
+  var randBidenPos = Math.floor(Math.random() * 7);
+  var randTrumpPos = Math.floor(Math.random() * 7);
+
+  bPos += randBidenPos;
+  tPos += randTrumpPos;
+
+  bidenDiv.style.left = bPos + "px";
+  trumpDiv.style.left = tPos + "px";
+
+  if (bPos > 1300 || tPos > 1300) {
+    clearInterval(raceSpeed);
+    winner();
   }
 }
+
+function winner() {
+  if (bPos > 1300) {
+    bidenWins();
+  }
+  else if (tPos > 1300) {
+    trumpWins();
+  }
+}
+
+
+function bidenWins() {
+  bImage.style.display = "none";
+  tImage.style.display = "none";
+  document.getElementById("BidenWins").style.display = "block";
+  document.getElementById("BidenWins").style.width = "175px";
+  document.getElementById("BidenWins").style.height = "auto";
+  document.getElementById("BidenWins").style.position = "fixed";
+  document.getElementById("BidenWins").style.top = "40%";
+  document.getElementById("BidenWins").style.left = "45%";
+}
+
+function trumpWins() {
+  bImage.style.display = "none";
+  tImage.style.display = "none";
+  document.getElementById("TrumpWins").style.display = "block";
+  document.getElementById("TrumpWins").style.width = "175px";
+  document.getElementById("TrumpWins").style.height = "auto";
+  document.getElementById("TrumpWins").style.position = "fixed";
+  document.getElementById("TrumpWins").style.top = "40%";
+  document.getElementById("TrumpWins").style.left = "45%";
+}
+

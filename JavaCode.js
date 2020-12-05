@@ -57,15 +57,6 @@ var vue = new Vue({
     computed: {
         buttonImage() {
             return this.racing ? "RedFlag.png" : "GreenFlag.png";
-        } ,
-        winnerImage() {
-            if (this.awesomeDude == 1)
-                return "JoeBiden.png";
-            else if (this.awesomeDude == 2)
-                return "DonaldTrump.png";
-            else {
-                return "tie.png";
-            }
         },
         playerImage() {
             if (this.awesomeDude == 1)
@@ -73,7 +64,7 @@ var vue = new Vue({
             else if (this.awesomeDude == 2)
                 return "TrumpWins.png";
             else {
-                return "tie.png";
+                return;
             }
         },
         player1Position() {

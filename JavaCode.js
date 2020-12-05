@@ -70,15 +70,15 @@ var vue = new Vue({
         player1Position() {
             return {
                 left: this.p1Move + "vw",
-                height: "200px",
-                width: "200px"
+                height: "100px",
+                width: "100px"
             }
         } ,
         player2Position() {
             return {
                 left: this.p2Move + "vw",
-                height: "200px",
-                width: "200px"
+                height: "100px",
+                width: "100px"
             }
         }
     }
